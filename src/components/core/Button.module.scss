@@ -1,0 +1,29 @@
+@use "@/styles/tokens" as *;
+
+.button {
+  padding: $space-md $space-lg;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: $color-primary;
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.secondary {
+  background-color: $color-secondary;
+  color: white;
+}

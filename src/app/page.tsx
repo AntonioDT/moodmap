@@ -1,14 +1,19 @@
-import Button from "@/components/core/Button";
+"use client";
+
+import { useState } from "react";
+import MoodSelector, { Mood } from "@/components/mood/MoodSelector";
+import Card from "@/components/core/Card";
 
 export default function Home() {
+  const [mood, setMood] = useState<Mood | undefined>();
+
   return (
     <main className="container">
-      <h1>MoodMap</h1>
-      <p>Il tuo specchio emotivo.</p>
+      <Card>
+        <h3>Come ti senti oggi?</h3>
 
-      <div style={{ marginTop: 24 }}>
-        <Button>Inizia</Button>
-      </div>
+        <MoodSelector value={mood} onChange={setMood} />
+      </Card>
     </main>
   );
 }

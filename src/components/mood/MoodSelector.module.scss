@@ -1,0 +1,56 @@
+@use "@/styles/tokens" as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  padding: 8px;
+  border-radius: 12px;
+
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.mood:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.mood:active {
+  transform: scale(0.92);
+}
+
+.emoji {
+  font-size: 36px;
+}
+
+.label {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.selected[data-mood="1"] {
+  background: $mood-very-bad;
+}
+
+.selected[data-mood="2"] {
+  background: $mood-neutral;
+}
+
+.selected[data-mood="3"] {
+  background: $mood-good;
+}
+
+.selected[data-mood="4"] {
+  background: $mood-very-good;
+}

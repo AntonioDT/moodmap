@@ -1,0 +1,20 @@
+@use "@/styles/tokens" as *;
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 14px;
+  color: $color-text-primary;
+  cursor: pointer;
+}
+
+.radio input {
+  cursor: pointer;
+}

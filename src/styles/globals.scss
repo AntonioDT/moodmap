@@ -17,3 +17,19 @@ body {
   margin: 0 auto;
   padding: $space-lg;
 }
+
+.mood-very-bad {
+  background-color: $mood-very-bad;
+}
+
+.mood-neutral {
+  background-color: $mood-neutral;
+}
+
+.mood-good {
+  background-color: $mood-good;
+}
+
+.mood-very-good {
+  background-color: $mood-very-good;
+}

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import MoodSelector, { Mood } from "@/components/mood/MoodSelector";
+import MoodSelector from "@/components/mood/MoodSelector";
 import Card from "@/components/core/Card";
+import { Mood } from "@/lib/types";
 
 export default function Home() {
   const [mood, setMood] = useState<Mood | undefined>();

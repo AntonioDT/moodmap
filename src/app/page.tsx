@@ -1,19 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import MoodSelector from "@/components/mood/MoodSelector";
 import Card from "@/components/core/Card";
-import { Mood } from "@/lib/types";
+import TagChips from "@/components/mood/TagChips";
 
 export default function Home() {
-  const [mood, setMood] = useState<Mood | undefined>();
+  const [tags, setTags] = useState<string[]>([]);
 
   return (
     <main className="container">
       <Card>
-        <h3>Come ti senti oggi?</h3>
+        <h3>Vuoi aggiungere un contesto?</h3>
 
-        <MoodSelector value={mood} onChange={setMood} />
+        <TagChips value={tags} onChange={setTags} />
+
+        <pre>{JSON.stringify(tags, null, 2)}</pre>
       </Card>
     </main>
   );
